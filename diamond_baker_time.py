@@ -3,6 +3,7 @@ from astral import LocationInfo
 from astral.sun import sun, elevation
 from datetime import timedelta, date
 import pytz
+from utils.color import Colors
 
 # TODO - Change these values to calculate for a different observing location
 OUR_LATTITUDE = 49.33100
@@ -18,18 +19,6 @@ OUR_DAY = 26
 MT_BAKER_HEIGHT = 3286
 MT_BAKER_LATTITUDE = 48.776403
 MT_BAKER_LONGITUDE = -121.819222
-
-# Define ANSI escape codes for colors
-class Colors:
-    HEADER = '\033[95m'
-    OKBLUE = '\033[94m'
-    OKCYAN = '\033[96m'
-    OKGREEN = '\033[92m'
-    WARNING = '\033[93m'
-    FAIL = '\033[91m'
-    ENDC = '\033[0m'
-    BOLD = '\033[1m'
-    UNDERLINE = '\033[4m'
 
 def haversine(lat1, lon1, lat2, lon2):
     """
